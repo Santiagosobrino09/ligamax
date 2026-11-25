@@ -1,11 +1,25 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 export default function Dashboard() {
+    const router = useRouter();
+  const [autorizado, setAutorizado] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("ligamax_acceso") === "ok") {
+      setAutorizado(true);
+    } else {
+      router.replace("/login");
+    }
+  }, [router]);
     const partidos = [
         { id: 1, liga: "LaLiga", local:"Real Madrid", visitante: "Barcelona", Hora: "15:00", estado: "En vivo" },
         { id: 2, liga: "Premier League", local:"Liverpool", visitante: "Manchester City", Hora: "14:00", estado: "Próximo" },
         { id: 3, liga: "Liga Betplay", local:"Junior", visitante: "Nacional", Hora: "16:00", estado: "Próximo" },
         { id: 4, liga: "Serie A", local:"Juventus", visitante: "Inter de Milán", Hora: "17:00", estado: "Próximo" }
     ];
-
+    if (!autorizado) return null;
     return (
      <main className="min-h-screen bg-slate-950 px-8 text-white">
         <header className="mb-10 flex items-center justify-between">
