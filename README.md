@@ -6,7 +6,7 @@ mostrar información de partidos de una manera sencilla y organizada.
 
 **Integrantes**
 - Santiago Sobrino
-- Rosmel Galvis
+- Rosmel Galvis Burbano
 - Diego Vera
 - Alejandro Saavedra
 
