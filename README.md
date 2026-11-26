@@ -47,6 +47,13 @@ realizan cambios y se suben al repositorio, GitHub Actions ejecuta los
 pasos de preparación y envío de los archivos al servidor, según la
 configuración del proyecto.
 
+## Flujo del proyecto
+1. El usuario entra a la página principal, donde se muestran los eventos deportivos.
+2. Selecciona un evento y el reproductor de demostración actualiza su contenido.
+3. Puede consultar los planes Standard y Premium.
+4. Puede ir a la pantalla de acceso (inicio de sesión de demostración) y al panel de partidos.
+Flujo de publicación: el equipo sube los cambios a GitHub, GitHub Actions instala las dependencias y construye la página, y los archivos se envían al servidor EC2 de AWS.
+
 
 **Organización de las carpetas**
 - app/: contiene las páginas y archivos principales de la
